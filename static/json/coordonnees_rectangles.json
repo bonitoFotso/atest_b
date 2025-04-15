@@ -1,0 +1,662 @@
+{
+    "ref": {
+        "Coin sup\u00e9rieur gauche": [
+            237,
+            488
+        ],
+        "Coin sup\u00e9rieur droit": [
+            552,
+            488
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            237,
+            521
+        ],
+        "Coin inf\u00e9rieur droit": [
+            552,
+            521
+        ],
+        "Centre": [
+            394,
+            504
+        ]
+    },
+    "fonction": {
+        "Coin sup\u00e9rieur gauche": [
+            218,
+            434
+        ],
+        "Coin sup\u00e9rieur droit": [
+            539,
+            434
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            218,
+            468
+        ],
+        "Coin inf\u00e9rieur droit": [
+            539,
+            468
+        ],
+        "Centre": [
+            378,
+            451
+        ]
+    },
+    "nom_prenom": {
+        "Coin sup\u00e9rieur gauche": [
+            282,
+            379
+        ],
+        "Coin sup\u00e9rieur droit": [
+            701,
+            379
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            282,
+            413
+        ],
+        "Coin inf\u00e9rieur droit": [
+            701,
+            413
+        ],
+        "Centre": [
+            491,
+            396
+        ]
+    },
+    "add": {
+        "Coin sup\u00e9rieur gauche": [
+            765,
+            433
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1174,
+            433
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            765,
+            467
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1174,
+            467
+        ],
+        "Centre": [
+            969,
+            450
+        ]
+    },
+    "titre": {
+        "Coin sup\u00e9rieur gauche": [
+            141,
+            638
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1273,
+            638
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            141,
+            685
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1273,
+            685
+        ],
+        "Centre": [
+            707,
+            661
+        ]
+    },
+    "add2": {
+        "Coin sup\u00e9rieur gauche": [
+            270,
+            743
+        ],
+        "Coin sup\u00e9rieur droit": [
+            798,
+            743
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            270,
+            777
+        ],
+        "Coin inf\u00e9rieur droit": [
+            798,
+            777
+        ],
+        "Centre": [
+            534,
+            760
+        ]
+    },
+    "training_duration": {
+        "Coin sup\u00e9rieur gauche": [
+            1156,
+            743
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1343,
+            743
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1156,
+            776
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1343,
+            776
+        ],
+        "Centre": [
+            1249,
+            759
+        ]
+    },
+    "symbols": {
+        "Coin sup\u00e9rieur gauche": [
+            82,
+            931
+        ],
+        "Coin sup\u00e9rieur droit": [
+            826,
+            931
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            82,
+            965
+        ],
+        "Coin inf\u00e9rieur droit": [
+            826,
+            965
+        ],
+        "Centre": [
+            454,
+            948
+        ]
+    },
+    "lieu": {
+        "Coin sup\u00e9rieur gauche": [
+            621,
+            1041
+        ],
+        "Coin sup\u00e9rieur droit": [
+            793,
+            1041
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            621,
+            1074
+        ],
+        "Coin inf\u00e9rieur droit": [
+            793,
+            1074
+        ],
+        "Centre": [
+            707,
+            1057
+        ]
+    },
+    "date": {
+        "Coin sup\u00e9rieur gauche": [
+            543,
+            1349
+        ],
+        "Coin sup\u00e9rieur droit": [
+            791,
+            1349
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            543,
+            1383
+        ],
+        "Coin inf\u00e9rieur droit": [
+            791,
+            1383
+        ],
+        "Centre": [
+            667,
+            1366
+        ]
+    },
+    "nom": {
+        "Coin sup\u00e9rieur gauche": [
+            163,
+            1749
+        ],
+        "Coin sup\u00e9rieur droit": [
+            369,
+            1749
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            163,
+            1768
+        ],
+        "Coin inf\u00e9rieur droit": [
+            369,
+            1768
+        ],
+        "Centre": [
+            266,
+            1758
+        ]
+    },
+    "prenom": {
+        "Coin sup\u00e9rieur gauche": [
+            473,
+            1746
+        ],
+        "Coin sup\u00e9rieur droit": [
+            642,
+            1746
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            473,
+            1769
+        ],
+        "Coin inf\u00e9rieur droit": [
+            642,
+            1769
+        ],
+        "Centre": [
+            557,
+            1757
+        ]
+    },
+    "fonction2": {
+        "Coin sup\u00e9rieur gauche": [
+            213,
+            1773
+        ],
+        "Coin sup\u00e9rieur droit": [
+            360,
+            1773
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            213,
+            1796
+        ],
+        "Coin inf\u00e9rieur droit": [
+            360,
+            1796
+        ],
+        "Centre": [
+            286,
+            1784
+        ]
+    },
+    "nom_emp": {
+        "Coin sup\u00e9rieur gauche": [
+            887,
+            1613
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1093,
+            1613
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            887,
+            1635
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1093,
+            1635
+        ],
+        "Centre": [
+            990,
+            1624
+        ]
+    },
+    "fonction_emp": {
+        "Coin sup\u00e9rieur gauche": [
+            913,
+            1641
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1093,
+            1641
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            913,
+            1663
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1093,
+            1663
+        ],
+        "Centre": [
+            1003,
+            1652
+        ]
+    },
+    "prenom_emp": {
+        "Coin sup\u00e9rieur gauche": [
+            899,
+            1674
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1095,
+            1674
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            899,
+            1696
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1095,
+            1696
+        ],
+        "Centre": [
+            997,
+            1685
+        ]
+    },
+    "ref_emp": {
+        "Coin sup\u00e9rieur gauche": [
+            796,
+            1876
+        ],
+        "Coin sup\u00e9rieur droit": [
+            919,
+            1876
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            796,
+            1898
+        ],
+        "Coin inf\u00e9rieur droit": [
+            919,
+            1898
+        ],
+        "Centre": [
+            857,
+            1887
+        ]
+    },
+    "date_emp": {
+        "Coin sup\u00e9rieur gauche": [
+            959,
+            1876
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1118,
+            1876
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            959,
+            1898
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1118,
+            1898
+        ],
+        "Centre": [
+            1038,
+            1887
+        ]
+    },
+    "validiter": {
+        "Coin sup\u00e9rieur gauche": [
+            1160,
+            1876
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1334,
+            1876
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1160,
+            1898
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1334,
+            1898
+        ],
+        "Centre": [
+            1247,
+            1887
+        ]
+    },
+    "n_titre": {
+        "Coin sup\u00e9rieur gauche": [
+            213,
+            1697
+        ],
+        "Coin sup\u00e9rieur droit": [
+            382,
+            1697
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            213,
+            1719
+        ],
+        "Coin inf\u00e9rieur droit": [
+            382,
+            1719
+        ],
+        "Centre": [
+            297,
+            1708
+        ]
+    },
+    "QR Code": {
+        "Coin sup\u00e9rieur gauche": [
+            1213,
+            367
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1360,
+            367
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1213,
+            515
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1360,
+            515
+        ],
+        "Centre": [
+            1286,
+            441
+        ]
+    },
+    "QR Code 2": {
+        "Coin sup\u00e9rieur gauche": [
+            125,
+            1588
+        ],
+        "Coin sup\u00e9rieur droit": [
+            219,
+            1588
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            125,
+            1682
+        ],
+        "Coin inf\u00e9rieur droit": [
+            219,
+            1682
+        ],
+        "Centre": [
+            172,
+            1635
+        ]
+    },
+    "Photo": {
+        "Coin sup\u00e9rieur gauche": [
+            433,
+            1503
+        ],
+        "Coin sup\u00e9rieur droit": [
+            647,
+            1503
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            433,
+            1717
+        ],
+        "Coin inf\u00e9rieur droit": [
+            647,
+            1717
+        ],
+        "Centre": [
+            540,
+            1610
+        ]
+    },
+    "instalations_conserner": {
+        "Coin sup\u00e9rieur gauche": [
+            766,
+            1770
+        ],
+        "Coin sup\u00e9rieur droit": [
+            995,
+            1770
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            766,
+            1791
+        ],
+        "Coin inf\u00e9rieur droit": [
+            995,
+            1791
+        ],
+        "Centre": [
+            880,
+            1780
+        ]
+    },
+    "indication": {
+        "Coin sup\u00e9rieur gauche": [
+            1077,
+            1773
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1326,
+            1773
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1077,
+            1793
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1326,
+            1793
+        ],
+        "Centre": [
+            1201,
+            1783
+        ]
+    },
+    "Logo": {
+        "Coin sup\u00e9rieur gauche": [
+            1108,
+            1556
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1293,
+            1556
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1108,
+            1721
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1293,
+            1721
+        ],
+        "Centre": [
+            1200,
+            1638
+        ]
+    },
+    "header": {
+        "Coin sup\u00e9rieur gauche": [
+            204,
+            240
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1306,
+            240
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            204,
+            319
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1306,
+            319
+        ],
+        "Centre": [
+            755,
+            279
+        ]
+    },
+    "role": {
+        "Coin sup\u00e9rieur gauche": [
+            101,
+            1864
+        ],
+        "Coin sup\u00e9rieur droit": [
+            249,
+            1864
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            101,
+            1947
+        ],
+        "Coin inf\u00e9rieur droit": [
+            249,
+            1947
+        ],
+        "Centre": [
+            175,
+            1905
+        ]
+    },
+    "symbole2": {
+        "Coin sup\u00e9rieur gauche": [
+            304,
+            1864
+        ],
+        "Coin sup\u00e9rieur droit": [
+            438,
+            1864
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            304,
+            1947
+        ],
+        "Coin inf\u00e9rieur droit": [
+            438,
+            1947
+        ],
+        "Centre": [
+            371,
+            1905
+        ]
+    },
+    "tension": {
+        "Coin sup\u00e9rieur gauche": [
+            468,
+            1864
+        ],
+        "Coin sup\u00e9rieur droit": [
+            649,
+            1864
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            468,
+            1947
+        ],
+        "Coin inf\u00e9rieur droit": [
+            649,
+            1947
+        ],
+        "Centre": [
+            558,
+            1905
+        ]
+    }
+}

@@ -1,0 +1,750 @@
+{
+    "['Validité', 'jaune_1']": {
+        "Coin sup\u00e9rieur gauche": [
+            1152,
+            1876
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1306,
+            1876
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1152,
+            1909
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1306,
+            1909
+        ],
+        "Centre": [
+            1229,
+            1892
+        ]
+    },
+    "['N Titre', 'violet_1']": {
+        "Coin sup\u00e9rieur gauche": [
+            213,
+            1692
+        ],
+        "Coin sup\u00e9rieur droit": [
+            400,
+            1692
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            213,
+            1726
+        ],
+        "Coin inf\u00e9rieur droit": [
+            400,
+            1726
+        ],
+        "Centre": [
+            306,
+            1709
+        ]
+    },
+    "['Référence 2', 'jaune_2']": {
+        "Coin sup\u00e9rieur gauche": [
+            772,
+            1876
+        ],
+        "Coin sup\u00e9rieur droit": [
+            927,
+            1876
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            772,
+            1909
+        ],
+        "Coin inf\u00e9rieur droit": [
+            927,
+            1909
+        ],
+        "Centre": [
+            849,
+            1892
+        ]
+    },
+    "['Indication supplémentaire', 'jaune_3']": {
+        "Coin sup\u00e9rieur gauche": [
+            1069,
+            1795
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1301,
+            1795
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1069,
+            1828
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1301,
+            1828
+        ],
+        "Centre": [
+            1185,
+            1811
+        ]
+    },
+    "['Installations concernées', 'jaune_4']": {
+        "Coin sup\u00e9rieur gauche": [
+            766,
+            1795
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1005,
+            1795
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            766,
+            1828
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1005,
+            1828
+        ],
+        "Centre": [
+            885,
+            1811
+        ]
+    },
+    "['Fonction 2', 'jaune_5']": {
+        "Coin sup\u00e9rieur gauche": [
+            494,
+            1745
+        ],
+        "Coin sup\u00e9rieur droit": [
+            668,
+            1745
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            494,
+            1778
+        ],
+        "Coin inf\u00e9rieur droit": [
+            668,
+            1778
+        ],
+        "Centre": [
+            581,
+            1761
+        ]
+    },
+    "['Nom 2', 'jaune_6']": {
+        "Coin sup\u00e9rieur gauche": [
+            156,
+            1739
+        ],
+        "Coin sup\u00e9rieur droit": [
+            382,
+            1739
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            156,
+            1772
+        ],
+        "Coin inf\u00e9rieur droit": [
+            382,
+            1772
+        ],
+        "Centre": [
+            269,
+            1755
+        ]
+    },
+    "['Employeur 2', 'jaune_7']": {
+        "Coin sup\u00e9rieur gauche": [
+            1055,
+            1684
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1353,
+            1684
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1055,
+            1717
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1353,
+            1717
+        ],
+        "Centre": [
+            1204,
+            1700
+        ]
+    },
+    "['Fonction Emp', 'jaune_8']": {
+        "Coin sup\u00e9rieur gauche": [
+            820,
+            1667
+        ],
+        "Coin sup\u00e9rieur droit": [
+            975,
+            1667
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            820,
+            1700
+        ],
+        "Coin inf\u00e9rieur droit": [
+            975,
+            1700
+        ],
+        "Centre": [
+            897,
+            1683
+        ]
+    },
+    "['Nom Emp', 'jaune_9']": {
+        "Coin sup\u00e9rieur gauche": [
+            813,
+            1586
+        ],
+        "Coin sup\u00e9rieur droit": [
+            967,
+            1586
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            813,
+            1619
+        ],
+        "Coin inf\u00e9rieur droit": [
+            967,
+            1619
+        ],
+        "Centre": [
+            890,
+            1602
+        ]
+    },
+    "['Date Remise', 'jaune_10']": {
+        "Coin sup\u00e9rieur gauche": [
+            361,
+            1125
+        ],
+        "Coin sup\u00e9rieur droit": [
+            658,
+            1125
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            361,
+            1158
+        ],
+        "Coin inf\u00e9rieur droit": [
+            658,
+            1158
+        ],
+        "Centre": [
+            509,
+            1141
+        ]
+    },
+    "['Lieu', 'jaune_11']": {
+        "Coin sup\u00e9rieur gauche": [
+            176,
+            1056
+        ],
+        "Coin sup\u00e9rieur droit": [
+            402,
+            1056
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            176,
+            1089
+        ],
+        "Coin inf\u00e9rieur droit": [
+            402,
+            1089
+        ],
+        "Centre": [
+            289,
+            1072
+        ]
+    },
+    "['Symboles', 'jaune_12']": {
+        "Coin sup\u00e9rieur gauche": [
+            78,
+            970
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1020,
+            970
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            78,
+            1004
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1020,
+            1004
+        ],
+        "Centre": [
+            549,
+            987
+        ]
+    },
+    "['Durée', 'jaune_13']": {
+        "Coin sup\u00e9rieur gauche": [
+            1167,
+            777
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1328,
+            777
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1167,
+            810
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1328,
+            810
+        ],
+        "Centre": [
+            1247,
+            793
+        ]
+    },
+    "['Periode', 'jaune_14']": {
+        "Coin sup\u00e9rieur gauche": [
+            91,
+            732
+        ],
+        "Coin sup\u00e9rieur droit": [
+            545,
+            732
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            91,
+            766
+        ],
+        "Coin inf\u00e9rieur droit": [
+            545,
+            766
+        ],
+        "Centre": [
+            318,
+            749
+        ]
+    },
+    "['Titre', 'jaune_15']": {
+        "Coin sup\u00e9rieur gauche": [
+            128,
+            621
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1268,
+            621
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            128,
+            672
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1268,
+            672
+        ],
+        "Centre": [
+            698,
+            646
+        ]
+    },
+    "['BP', 'jaune_16']": {
+        "Coin sup\u00e9rieur gauche": [
+            817,
+            479
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1211,
+            479
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            817,
+            512
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1211,
+            512
+        ],
+        "Centre": [
+            1014,
+            495
+        ]
+    },
+    "['Fonction', 'jaune_17']": {
+        "Coin sup\u00e9rieur gauche": [
+            225,
+            450
+        ],
+        "Coin sup\u00e9rieur droit": [
+            679,
+            450
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            225,
+            483
+        ],
+        "Coin inf\u00e9rieur droit": [
+            679,
+            483
+        ],
+        "Centre": [
+            452,
+            466
+        ]
+    },
+    "['Client', 'jaune_18']": {
+        "Coin sup\u00e9rieur gauche": [
+            848,
+            387
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1210,
+            387
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            848,
+            421
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1210,
+            421
+        ],
+        "Centre": [
+            1029,
+            404
+        ]
+    },
+    "['Nom', 'jaune_19']": {
+        "Coin sup\u00e9rieur gauche": [
+            182,
+            366
+        ],
+        "Coin sup\u00e9rieur droit": [
+            636,
+            366
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            182,
+            399
+        ],
+        "Coin inf\u00e9rieur droit": [
+            636,
+            399
+        ],
+        "Centre": [
+            409,
+            382
+        ]
+    },
+    "['Date', 'rouge_1']": {
+        "Coin sup\u00e9rieur gauche": [
+            965,
+            1876
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1120,
+            1876
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            965,
+            1909
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1120,
+            1909
+        ],
+        "Centre": [
+            1042,
+            1892
+        ]
+    },
+    "['Prénom 2', 'rouge_2']": {
+        "Coin sup\u00e9rieur gauche": [
+            207,
+            1776
+        ],
+        "Coin sup\u00e9rieur droit": [
+            381,
+            1776
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            207,
+            1810
+        ],
+        "Coin inf\u00e9rieur droit": [
+            381,
+            1810
+        ],
+        "Centre": [
+            294,
+            1793
+        ]
+    },
+    "['Prénom Emp', 'rouge_3']": {
+        "Coin sup\u00e9rieur gauche": [
+            819,
+            1626
+        ],
+        "Coin sup\u00e9rieur droit": [
+            973,
+            1626
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            819,
+            1660
+        ],
+        "Coin inf\u00e9rieur droit": [
+            973,
+            1660
+        ],
+        "Centre": [
+            896,
+            1643
+        ]
+    },
+    "['Lieu Formations', 'rouge_4']": {
+        "Coin sup\u00e9rieur gauche": [
+            278,
+            777
+        ],
+        "Coin sup\u00e9rieur droit": [
+            732,
+            777
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            278,
+            810
+        ],
+        "Coin inf\u00e9rieur droit": [
+            732,
+            810
+        ],
+        "Centre": [
+            505,
+            793
+        ]
+    },
+    "['Référence', 'rouge_5']": {
+        "Coin sup\u00e9rieur gauche": [
+            235,
+            500
+        ],
+        "Coin sup\u00e9rieur droit": [
+            689,
+            500
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            235,
+            533
+        ],
+        "Coin inf\u00e9rieur droit": [
+            689,
+            533
+        ],
+        "Centre": [
+            462,
+            516
+        ]
+    },
+    "['TEL', 'rouge_6']": {
+        "Coin sup\u00e9rieur gauche": [
+            817,
+            436
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1211,
+            436
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            817,
+            469
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1211,
+            469
+        ],
+        "Centre": [
+            1014,
+            452
+        ]
+    },
+    "['Prénom', 'rouge_7']": {
+        "Coin sup\u00e9rieur gauche": [
+            209,
+            409
+        ],
+        "Coin sup\u00e9rieur droit": [
+            663,
+            409
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            209,
+            443
+        ],
+        "Coin inf\u00e9rieur droit": [
+            663,
+            443
+        ],
+        "Centre": [
+            436,
+            426
+        ]
+    },
+    "['Tension', 'vert_1']": {
+        "Coin sup\u00e9rieur gauche": [
+            481,
+            1852
+        ],
+        "Coin sup\u00e9rieur droit": [
+            613,
+            1852
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            481,
+            1937
+        ],
+        "Coin inf\u00e9rieur droit": [
+            613,
+            1937
+        ],
+        "Centre": [
+            547,
+            1894
+        ]
+    },
+    "['Symbole 2', 'vert_2']": {
+        "Coin sup\u00e9rieur gauche": [
+            288,
+            1852
+        ],
+        "Coin sup\u00e9rieur droit": [
+            420,
+            1852
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            288,
+            1937
+        ],
+        "Coin inf\u00e9rieur droit": [
+            420,
+            1937
+        ],
+        "Centre": [
+            354,
+            1894
+        ]
+    },
+    "['Role', 'vert_3']": {
+        "Coin sup\u00e9rieur gauche": [
+            81,
+            1852
+        ],
+        "Coin sup\u00e9rieur droit": [
+            214,
+            1852
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            81,
+            1937
+        ],
+        "Coin inf\u00e9rieur droit": [
+            214,
+            1937
+        ],
+        "Centre": [
+            147,
+            1894
+        ]
+    },
+    "['QR 2', 'vert_4']": {
+        "Coin sup\u00e9rieur gauche": [
+            125,
+            1588
+        ],
+        "Coin sup\u00e9rieur droit": [
+            219,
+            1588
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            125,
+            1682
+        ],
+        "Coin inf\u00e9rieur droit": [
+            219,
+            1682
+        ],
+        "Centre": [
+            172,
+            1635
+        ]
+    },
+    "['Photo', 'vert_5']": {
+        "Coin sup\u00e9rieur gauche": [
+            425,
+            1522
+        ],
+        "Coin sup\u00e9rieur droit": [
+            626,
+            1522
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            425,
+            1723
+        ],
+        "Coin inf\u00e9rieur droit": [
+            626,
+            1723
+        ],
+        "Centre": [
+            525,
+            1622
+        ]
+    },
+    "['Logo', 'vert_6']": {
+        "Coin sup\u00e9rieur gauche": [
+            1051,
+            1502
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1353,
+            1502
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1051,
+            1670
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1353,
+            1670
+        ],
+        "Centre": [
+            1202,
+            1586
+        ]
+    },
+    "['QR', 'vert_7']": {
+        "Coin sup\u00e9rieur gauche": [
+            1253,
+            392
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1360,
+            392
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1253,
+            499
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1360,
+            499
+        ],
+        "Centre": [
+            1306,
+            445
+        ]
+    }
+}

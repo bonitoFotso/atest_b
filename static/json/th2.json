@@ -1,0 +1,750 @@
+{
+    "violet_1": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1515
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1515
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1546
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1546
+        ],
+        "Centre": [
+            1145,
+            1530
+        ]
+    },
+    "violet_2": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1386
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1386
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1417
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1417
+        ],
+        "Centre": [
+            1145,
+            1401
+        ]
+    },
+    "violet_3": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1293
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1293
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1323
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1323
+        ],
+        "Centre": [
+            1145,
+            1308
+        ]
+    },
+    "violet_4": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1227
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1227
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1257
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1257
+        ],
+        "Centre": [
+            1145,
+            1242
+        ]
+    },
+    "violet_5": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1160
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1160
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1191
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1191
+        ],
+        "Centre": [
+            1145,
+            1175
+        ]
+    },
+    "violet_6": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1096
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1096
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1126
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1126
+        ],
+        "Centre": [
+            1145,
+            1111
+        ]
+    },
+    "violet_7": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1026
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1026
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1061
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1061
+        ],
+        "Centre": [
+            1145,
+            1043
+        ]
+    },
+    "violet_8": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            928
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            928
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            960
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            960
+        ],
+        "Centre": [
+            1145,
+            944
+        ]
+    },
+    "violet_9": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            860
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            860
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            891
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            891
+        ],
+        "Centre": [
+            1145,
+            875
+        ]
+    },
+    "violet_10": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            791
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            791
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            823
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            823
+        ],
+        "Centre": [
+            1145,
+            807
+        ]
+    },
+    "jaune_1": {
+        "Coin sup\u00e9rieur gauche": [
+            948,
+            1677
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1256,
+            1677
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            948,
+            1706
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1256,
+            1706
+        ],
+        "Centre": [
+            1102,
+            1691
+        ]
+    },
+    "jaune_2": {
+        "Coin sup\u00e9rieur gauche": [
+            302,
+            1674
+        ],
+        "Coin sup\u00e9rieur droit": [
+            609,
+            1674
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            302,
+            1704
+        ],
+        "Coin inf\u00e9rieur droit": [
+            609,
+            1704
+        ],
+        "Centre": [
+            455,
+            1689
+        ]
+    },
+    "jaune_3": {
+        "Coin sup\u00e9rieur gauche": [
+            281,
+            712
+        ],
+        "Coin sup\u00e9rieur droit": [
+            589,
+            712
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            281,
+            741
+        ],
+        "Coin inf\u00e9rieur droit": [
+            589,
+            741
+        ],
+        "Centre": [
+            435,
+            726
+        ]
+    },
+    "jaune_4": {
+        "Coin sup\u00e9rieur gauche": [
+            1083,
+            705
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1325,
+            705
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1083,
+            734
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1325,
+            734
+        ],
+        "Centre": [
+            1204,
+            719
+        ]
+    },
+    "jaune_5": {
+        "Coin sup\u00e9rieur gauche": [
+            1083,
+            651
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1337,
+            651
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1083,
+            680
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1337,
+            680
+        ],
+        "Centre": [
+            1210,
+            665
+        ]
+    },
+    "jaune_6": {
+        "Coin sup\u00e9rieur gauche": [
+            308,
+            651
+        ],
+        "Coin sup\u00e9rieur droit": [
+            616,
+            651
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            308,
+            680
+        ],
+        "Coin inf\u00e9rieur droit": [
+            616,
+            680
+        ],
+        "Centre": [
+            462,
+            665
+        ]
+    },
+    "jaune_7": {
+        "Coin sup\u00e9rieur gauche": [
+            1123,
+            597
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1336,
+            597
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1123,
+            626
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1336,
+            626
+        ],
+        "Centre": [
+            1229,
+            611
+        ]
+    },
+    "jaune_8": {
+        "Coin sup\u00e9rieur gauche": [
+            525,
+            575
+        ],
+        "Coin sup\u00e9rieur droit": [
+            833,
+            575
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            525,
+            604
+        ],
+        "Coin inf\u00e9rieur droit": [
+            833,
+            604
+        ],
+        "Centre": [
+            679,
+            589
+        ]
+    },
+    "jaune_9": {
+        "Coin sup\u00e9rieur gauche": [
+            424,
+            516
+        ],
+        "Coin sup\u00e9rieur droit": [
+            821,
+            516
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            424,
+            545
+        ],
+        "Coin inf\u00e9rieur droit": [
+            821,
+            545
+        ],
+        "Centre": [
+            622,
+            530
+        ]
+    },
+    "jaune_10": {
+        "Coin sup\u00e9rieur gauche": [
+            867,
+            474
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1175,
+            474
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            867,
+            503
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1175,
+            503
+        ],
+        "Centre": [
+            1021,
+            488
+        ]
+    },
+    "jaune_11": {
+        "Coin sup\u00e9rieur gauche": [
+            450,
+            459
+        ],
+        "Coin sup\u00e9rieur droit": [
+            811,
+            459
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            450,
+            488
+        ],
+        "Coin inf\u00e9rieur droit": [
+            811,
+            488
+        ],
+        "Centre": [
+            630,
+            473
+        ]
+    },
+    "jaune_12": {
+        "Coin sup\u00e9rieur gauche": [
+            416,
+            402
+        ],
+        "Coin sup\u00e9rieur droit": [
+            765,
+            402
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            416,
+            431
+        ],
+        "Coin inf\u00e9rieur droit": [
+            765,
+            431
+        ],
+        "Centre": [
+            590,
+            416
+        ]
+    },
+    "rose_1": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1580
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1580
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1639
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1639
+        ],
+        "Centre": [
+            1145,
+            1609
+        ]
+    },
+    "rose_2": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1451
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1451
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1482
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1482
+        ],
+        "Centre": [
+            1145,
+            1466
+        ]
+    },
+    "rose_3": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1326
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1326
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1384
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1384
+        ],
+        "Centre": [
+            1145,
+            1355
+        ]
+    },
+    "rose_4": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1260
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1260
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1290
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1290
+        ],
+        "Centre": [
+            1145,
+            1275
+        ]
+    },
+    "rose_5": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1193
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1193
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1224
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1224
+        ],
+        "Centre": [
+            1145,
+            1208
+        ]
+    },
+    "rose_6": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1128
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1128
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1158
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1158
+        ],
+        "Centre": [
+            1145,
+            1143
+        ]
+    },
+    "rose_7": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            1064
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            1064
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            1093
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            1093
+        ],
+        "Centre": [
+            1145,
+            1078
+        ]
+    },
+    "rose_8": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            962
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            962
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            995
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            995
+        ],
+        "Centre": [
+            1145,
+            978
+        ]
+    },
+    "rose_9": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            894
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            894
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            926
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            926
+        ],
+        "Centre": [
+            1145,
+            910
+        ]
+    },
+    "rose_10": {
+        "Coin sup\u00e9rieur gauche": [
+            972,
+            826
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1318,
+            826
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            972,
+            857
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1318,
+            857
+        ],
+        "Centre": [
+            1145,
+            841
+        ]
+    },
+    "vert_1": {
+        "Coin sup\u00e9rieur gauche": [
+            1199,
+            425
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1319,
+            425
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1199,
+            545
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1319,
+            545
+        ],
+        "Centre": [
+            1259,
+            485
+        ]
+    },
+    "vert_2": {
+        "Coin sup\u00e9rieur gauche": [
+            81,
+            404
+        ],
+        "Coin sup\u00e9rieur droit": [
+            296,
+            404
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            81,
+            619
+        ],
+        "Coin inf\u00e9rieur droit": [
+            296,
+            619
+        ],
+        "Centre": [
+            188,
+            511
+        ]
+    }
+}

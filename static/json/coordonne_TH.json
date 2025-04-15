@@ -1,0 +1,774 @@
+{
+    "['Échelles, escabeaux et marchepieds', 'violet_1']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1518
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1518
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1569
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1569
+        ],
+        "Centre": [
+            1175,
+            1543
+        ]
+    },
+    "['Ascenseurs et plates-formes de transport', 'violet_2']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1363
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1363
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1393
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1393
+        ],
+        "Centre": [
+            1175,
+            1378
+        ]
+    },
+    "['Plates-formes de travail sur mât', 'violet_3']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1270
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1270
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1300
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1300
+        ],
+        "Centre": [
+            1175,
+            1285
+        ]
+    },
+    "['Nacelles pour travaux sur réseaux', 'violet_4']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1206
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1206
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1236
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1236
+        ],
+        "Centre": [
+            1175,
+            1221
+        ]
+    },
+    "['Nacelles de nettoyage de façade', 'violet_5']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1142
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1142
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1172
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1172
+        ],
+        "Centre": [
+            1175,
+            1157
+        ]
+    },
+    "['Plates-formes sur mât', 'violet_6']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1078
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1078
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1107
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1107
+        ],
+        "Centre": [
+            1175,
+            1092
+        ]
+    },
+    "['Nacelles élévatrices automotrices', 'violet_7']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1013
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1013
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1043
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1043
+        ],
+        "Centre": [
+            1175,
+            1028
+        ]
+    },
+    "['Classe 5', 'violet_8']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            919
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            919
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            948
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            948
+        ],
+        "Centre": [
+            1175,
+            933
+        ]
+    },
+    "['Classe 3', 'violet_9']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            855
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            855
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            884
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            884
+        ],
+        "Centre": [
+            1175,
+            869
+        ]
+    },
+    "['Classe 1', 'violet_10']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            790
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            790
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            820
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            820
+        ],
+        "Centre": [
+            1175,
+            805
+        ]
+    },
+    "['Tel', 'violet_11']": {
+        "Coin sup\u00e9rieur gauche": [
+            914,
+            503
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1174,
+            503
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            914,
+            532
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1174,
+            532
+        ],
+        "Centre": [
+            1044,
+            517
+        ]
+    },
+    "['Titulaire', 'jaune_1']": {
+        "Coin sup\u00e9rieur gauche": [
+            932,
+            1668
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1317,
+            1668
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            932,
+            1697
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1317,
+            1697
+        ],
+        "Centre": [
+            1124,
+            1682
+        ]
+    },
+
+    "['Employeur', 'jaune_2']": {
+        "Coin sup\u00e9rieur gauche": [
+            302,
+            1668
+        ],
+        "Coin sup\u00e9rieur droit": [
+            609,
+            1668
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            302,
+            1697
+        ],
+        "Coin inf\u00e9rieur droit": [
+            609,
+            1697
+        ],
+        "Centre": [
+            455,
+            1682
+        ]
+    },
+    "['N° de l’habilitation', 'jaune_4']": {
+        "Coin sup\u00e9rieur gauche": [
+            288,
+            705
+        ],
+        "Coin sup\u00e9rieur droit": [
+            596,
+            705
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            288,
+            734
+        ],
+        "Coin inf\u00e9rieur droit": [
+            596,
+            734
+        ],
+        "Centre": [
+            442,
+            719
+        ]
+    },
+    "['Date d’expiration', 'jaune_3']": {
+        "Coin sup\u00e9rieur gauche": [
+            1036,
+            705
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1308,
+            705
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1036,
+            734
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1308,
+            734
+        ],
+        "Centre": [
+            1172,
+            719
+        ]
+    },
+    "['Date de délivrance','jaune_5']": {
+        "Coin sup\u00e9rieur gauche": [
+            1049,
+            651
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1297,
+            651
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1049,
+            680
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1297,
+            680
+        ],
+        "Centre": [
+            1173,
+            665
+        ]
+    },
+    "['N° du rapport', 'jaune_6']": {
+        "Coin sup\u00e9rieur gauche": [
+            241,
+            651
+        ],
+        "Coin sup\u00e9rieur droit": [
+            549,
+            651
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            241,
+            680
+        ],
+        "Coin inf\u00e9rieur droit": [
+            549,
+            680
+        ],
+        "Centre": [
+            395,
+            665
+        ]
+    },
+    "['Date de la formation', 'jaune_7']": {
+        "Coin sup\u00e9rieur gauche": [
+            1062,
+            597
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1346,
+            597
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1062,
+            626
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1346,
+            626
+        ],
+        "Centre": [
+            1204,
+            611
+        ]
+    },
+    "['Poste d’affectation', 'jaune_8']": {
+        "Coin sup\u00e9rieur gauche": [
+            524,
+            577
+        ],
+        "Coin sup\u00e9rieur droit": [
+            831,
+            577
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            524,
+            606
+        ],
+        "Coin inf\u00e9rieur droit": [
+            831,
+            606
+        ],
+        "Centre": [
+            677,
+            591
+        ]
+    },
+    "['Fonction', 'jaune_9']": {
+        "Coin sup\u00e9rieur gauche": [
+            416,
+            516
+        ],
+        "Coin sup\u00e9rieur droit": [
+            724,
+            516
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            416,
+            545
+        ],
+        "Coin inf\u00e9rieur droit": [
+            724,
+            545
+        ],
+        "Centre": [
+            570,
+            530
+        ]
+    },
+    "['Employeur', 'jaune_10']": {
+        "Coin sup\u00e9rieur gauche": [
+            861,
+            462
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1180,
+            462
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            861,
+            491
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1180,
+            491
+        ],
+        "Centre": [
+            1020,
+            476
+        ]
+    },
+    "['Prénom', 'jaune_11']": {
+        "Coin sup\u00e9rieur gauche": [
+            437,
+            456
+        ],
+        "Coin sup\u00e9rieur droit": [
+            745,
+            456
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            437,
+            485
+        ],
+        "Coin inf\u00e9rieur droit": [
+            745,
+            485
+        ],
+        "Centre": [
+            591,
+            470
+        ]
+    },
+    "['Nom', 'jaune_12']": {
+        "Coin sup\u00e9rieur gauche": [
+            422,
+            402
+        ],
+        "Coin sup\u00e9rieur droit": [
+            730,
+            402
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            422,
+            431
+        ],
+        "Coin inf\u00e9rieur droit": [
+            730,
+            431
+        ],
+        "Centre": [
+            576,
+            416
+        ]
+    },
+    "['Ligne de vie (Toitures, Charpentes, Terrasses)', 'rose_1']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1427
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1427
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1484
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1484
+        ],
+        "Centre": [
+            1175,
+            1455
+        ]
+    },
+
+    "['Plates-formes suspendues à niveau variable', 'rose_2']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1303
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1303
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1361
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1361
+        ],
+        "Centre": [
+            1175,
+            1332
+        ]
+    },
+    "['Nacelles araignées', 'rose_3']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1238
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1238
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1268
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1268
+        ],
+        "Centre": [
+            1175,
+            1253
+        ]
+    },
+    "['Nacelles articulées tractables', 'rose_4']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1174
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1174
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1204
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1204
+        ],
+        "Centre": [
+            1175,
+            1189
+        ]
+    },
+    "['Plates-formes suspendues', 'rose_5']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1110
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1110
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1139
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1139
+        ],
+        "Centre": [
+            1175,
+            1124
+        ]
+    },
+    "['Nacelles élévatrices sur porteur', 'rose_6']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            1046
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            1046
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            1075
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            1075
+        ],
+        "Centre": [
+            1175,
+            1060
+        ]
+    },
+    "['Classe 6', 'rose_7']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            951
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            951
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            981
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            981
+        ],
+        "Centre": [
+            1175,
+            966
+        ]
+    },
+    "['Classe 4', 'rose_8']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            887
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            887
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            916
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            916
+        ],
+        "Centre": [
+            1175,
+            901
+        ]
+    },
+    "['Classe 2', 'rose_9']": {
+        "Coin sup\u00e9rieur gauche": [
+            1002,
+            823
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1349,
+            823
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            1002,
+            852
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1349,
+            852
+        ],
+        "Centre": [
+            1175,
+            837
+        ]
+    },
+    "['BP', 'rose_10']": {
+        "Coin sup\u00e9rieur gauche": [
+            917,
+            536
+        ],
+        "Coin sup\u00e9rieur droit": [
+            1177,
+            536
+        ],
+        "Coin inf\u00e9rieur gauche": [
+            917,
+            566
+        ],
+        "Coin inf\u00e9rieur droit": [
+            1177,
+            566
+        ],
+        "Centre": [
+            1047,
+            551
+        ]
+    },
+    "['qrc', 'vert_1']": {
+        "Coin supérieur gauche": [
+            1199,
+            425
+        ],
+        "Coin supérieur droit": [
+            1319,
+            425
+        ],
+        "Coin inférieur gauche": [
+            1199,
+            545
+        ],
+        "Coin inférieur droit": [
+            1319,
+            545
+        ],
+        "Centre": [
+            1259,
+            485
+        ]
+    },
+    "['photo', 'vert_2']": {
+        "Coin supérieur gauche": [
+            81,
+            404
+        ],
+        "Coin supérieur droit": [
+            296,
+            404
+        ],
+        "Coin inférieur gauche": [
+            81,
+            619
+        ],
+        "Coin inférieur droit": [
+            296,
+            619
+        ],
+        "Centre": [
+            188,
+            511
+        ]
+    }
+}
