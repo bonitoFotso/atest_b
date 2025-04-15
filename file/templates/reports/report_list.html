@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Liste des Rapports</h2>
+<ul>
+    {% for report in reports %}
+        <li><a href="{% url 'report-detail' report.pk %}">{{ report.title }} - {{ report.site.name }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'report-create' %}">Ajouter un Rapport</a>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Détails du Document</h2>
+<p><strong>Titre:</strong> {{ document.title }}</p>
+<p><strong>Site:</strong> {{ document.site.name }}</p>
+<p><strong>Description:</strong> {{ document.description }}</p>
+<p><strong>Fichier:</strong> <a href="{{ document.file.url }}">Télécharger</a></p>
+<p><strong>Date d'upload:</strong> {{ document.uploaded_at }}</p>
+<a href="{% url 'document-update' document.pk %}">Modifier</a>
+<a href="{% url 'document-delete' document.pk %}">Supprimer</a>
+<a href="{% url 'document-list' %}">Retour à la liste</a>
+
+</body>
+</html>

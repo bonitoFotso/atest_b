@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Détails du Certificat</h2>
+<p><strong>Titre:</strong> {{ certificate.title }}</p>
+<p><strong>Client:</strong> {{ certificate.client.name }}</p>
+<p><strong>Date d'émission:</strong> {{ certificate.issued_date }}</p>
+<p><strong>Date d'expiration:</strong> {% if certificate.expiry_date %}{{ certificate.expiry_date }}{% else %}Non applicable{% endif %}</p>
+<p><strong>Fichier:</strong> <a href="{{ certificate.file.url }}">Télécharger</a></p>
+<a href="{% url 'certificate-update' certificate.pk %}">Modifier</a>
+<a href="{% url 'certificate-delete' certificate.pk %}">Supprimer</a>
+<a href="{% url 'certificate-list' %}">Retour à la liste</a>
+
+</body>
+</html>

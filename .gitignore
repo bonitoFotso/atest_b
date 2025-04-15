@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments virtuels
+venv/
+env/
+ENV/
+.env
+.venv
+env.bak/
+venv.bak/
+
+# Django & DRF
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+staticfiles/
+
+# Si vous utilisez PostgreSQL
+*.psql
+postgres-data/
+
+# Dossiers de configuration IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+.project
+.pydevproject
+
+# Documentation générée
+docs/_build/
+site/
+
+# Tests et couverture
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Fichiers de migration générés par DRF/Django
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Fichiers de journalisation
+logs/
+*.log
+
+# Fichiers de configuration locaux
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Fichiers de dépendances
+node_modules/
+package-lock.json
+yarn.lock
+
+# Fichiers de déploiement
+.elasticbeanstalk/
+.ebextensions/
+.dockerignore
+docker-compose.override.yml
+
+# Fichiers temporaires
+tmp/
+temp/

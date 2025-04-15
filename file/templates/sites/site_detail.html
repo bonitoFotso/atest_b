@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Détails du Site</h2>
+<p><strong>Nom:</strong> {{ site.name }}</p>
+<p><strong>Client:</strong> {{ site.client.name }}</p>
+<p><strong>Localisation:</strong> {{ site.location }}</p>
+<a href="{% url 'site-update' site.pk %}">Modifier</a>
+<a href="{% url 'site-delete' site.pk %}">Supprimer</a>
+<a href="{% url 'site-list' %}">Retour à la liste</a>
+
+</body>
+</html>

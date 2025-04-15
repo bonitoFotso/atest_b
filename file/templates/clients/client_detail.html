@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Détails du Client</h2>
+<p><strong>Nom:</strong> {{ client.name }}</p>
+<p><strong>Email:</strong> {{ client.email }}</p>
+<p><strong>Téléphone:</strong> {{ client.phone }}</p>
+<p><strong>Adresse:</strong> {{ client.address }}</p>
+<a href="{% url 'client-update' client.pk %}">Modifier</a>
+<a href="{% url 'client-delete' client.pk %}">Supprimer</a>
+<a href="{% url 'client-list' %}">Retour à la liste</a>
+
+</body>
+</html>

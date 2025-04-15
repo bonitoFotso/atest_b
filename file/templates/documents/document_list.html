@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Liste des Documents</h2>
+<ul>
+    {% for document in documents %}
+        <li><a href="{% url 'document-detail' document.pk %}">{{ document.title }} - {{ document.site.name }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'document-create' %}">Ajouter un Document</a>
+
+</body>
+</html>

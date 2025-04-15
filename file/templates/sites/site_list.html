@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Liste des Sites</h2>
+<ul>
+    {% for site in sites %}
+        <li><a href="{% url 'site-detail' site.pk %}">{{ site.name }} - {{ site.client.name }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'site-create' %}">Ajouter un Site</a>
+
+</body>
+</html>

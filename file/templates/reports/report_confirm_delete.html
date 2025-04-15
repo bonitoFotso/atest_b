@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Supprimer le Rapport</h2>
+<p>Es-tu sûr de vouloir supprimer le rapport "{{ object.title }}" ?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Oui, supprimer</button>
+</form>
+<a href="{% url 'report-detail' object.pk %}">Annuler</a>
+
+</body>
+</html>

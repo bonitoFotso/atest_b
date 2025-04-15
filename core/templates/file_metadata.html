@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métadonnées du fichier</title>
+</head>
+<body>
+    <h1>Métadonnées du fichier</h1>
+
+    <!-- Formulaire pour uploader un fichier -->
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="uploaded_file">Choisissez un fichier :</label>
+        <input type="file" id="uploaded_file" name="uploaded_file">
+        <button type="submit">Uploader</button>
+    </form>
+
+    <!-- Afficher les métadonnées si un fichier a été uploadé -->
+    {% if file_name %}
+        <h2>Informations sur le fichier :</h2>
+        <p><strong>Nom du fichier :</strong> {{ file_name }}</p>
+        <p><strong>Taille du fichier :</strong> {{ file_size }} octets</p>
+        <p><strong>Date de création :</strong> {{ creation_time }}</p>
+        <p><strong>Date de dernière modification :</strong> {{ modification_time }}</p>
+        <p><strong>Permissions :</strong> {{ permissions }}</p>
+    {% endif %}
+</body>
+</html>

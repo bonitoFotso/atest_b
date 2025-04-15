@@ -1,0 +1,66 @@
+# apps/certifications/views.py
+from rest_framework.permissions import IsAuthenticated
+
+from apps.certifications.models import CertificaType, Session, Certificat
+from apps.certifications.serializers import (
+    CertificaTypeSerializer, SessionSerializer, CertificatSerializer
+)
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.parsers import MultiPartParser, FormParser
+from django.core.files.storage import default_storage
+from django.conf import settings
+import os
+from rest_framework import viewsets
+from apps.certifications.models import  Participant
+from apps.certifications.serializers import (
+    ParticipantSerializer
+)
+class ImageUploadView(APIView):
+    parser_classes = [MultiPartParser, FormParser]
+
+    def post(self, request, *args, **kwargs):
+        # Vérifiez si le fichier est inclus dans la requête
+        if 'photo' not in request.FILES:
+            return Response({"error": "Aucun fichier envoyé."}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Récupérez le fichier envoyé
+        image = request.FILES['photo']
+
+        # Enregistrez l'image dans le dossier média
+        file_path = default_storage.save(f"images/{image.name}", image)
+        file_url = os.path.join(settings.MEDIA_URL, file_path)
+
+        # Retournez l'URL de l'image en réponse
+        return Response({"url": request.build_absolute_uri(file_url)}, status=status.HTTP_201_CREATED)
+
+
+class CertificaTypeViewSet(viewsets.ModelViewSet):
+    queryset = CertificaType.objects.all()
+    serializer_class = CertificaTypeSerializer
+    permission_classes = [IsAuthenticated]
+
+
+class SessionViewSet(viewsets.ModelViewSet):
+    queryset = Session.objects.all()
+    serializer_class = SessionSerializer
+    permission_classes = [IsAuthenticated]
+
+
+class ParticipantViewSet(viewsets.ModelViewSet):
+    queryset = Participant.objects.all()
+    serializer_class = ParticipantSerializer
+    permission_classes = [IsAuthenticated]
+
+
+class CertificatViewSet(viewsets.ModelViewSet):
+    queryset = Certificat.objects.all()
+    serializer_class = CertificatSerializer
+    permission_classes = [IsAuthenticated]
+
+
+class ParticipantViewSet(viewsets.ModelViewSet):
+    queryset = Participant.objects.all()
+    serializer_class = ParticipantSerializer
+

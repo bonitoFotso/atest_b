@@ -1,0 +1,22 @@
+
+name: flutter_file_tracker
+description: A Flutter app to track company files sent to clients.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.5
+  file_picker: ^5.2.5
+  flutter_svg: ^1.1.5
+  sqflite: ^2.2.0+3
+  path_provider: ^2.0.11
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
