@@ -1,8 +1,7 @@
 # certifications/models.py
 
 from django.db import models
-from apps.documents.models import QRCode, Dossier
-from apps.habilitations.models import Participant
+
 
 
 class CertificaType(models.Model):
@@ -37,16 +36,16 @@ class Session(models.Model):
 
 
 
-class Certificat(models.Model):
-    name = models.CharField(max_length=255)
-    session = models.ForeignKey(Session, on_delete=models.CASCADE)
-    participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
-    qrcode = models.ForeignKey(QRCode, on_delete=models.CASCADE, null=True, blank=True)
-    fichier = models.FileField(upload_to='certificats/', null=True, blank=True)
-    dossier = models.ForeignKey(Dossier, null=True, blank=True, on_delete=models.SET_NULL)
-
-    def __str__(self):
-        return f"Certificat {self.name} - {self.participant.nom} {self.participant.prenom}"
+# class Certificat(models.Model):
+#     name = models.CharField(max_length=255)
+#     session = models.ForeignKey(Session, on_delete=models.CASCADE)
+#     participant = models.ForeignKey('Participant', on_delete=models.CASCADE)
+#     qrcode = models.ForeignKey('QRCode', on_delete=models.CASCADE, null=True, blank=True)
+#     fichier = models.FileField(upload_to='certificats/', null=True, blank=True)
+#     dossier = models.ForeignKey('Dossier', null=True, blank=True, on_delete=models.SET_NULL)
+# 
+#     def __str__(self):
+#         return f"Certificat {self.name} - {self.participant.nom} {self.participant.prenom}"
 
 
 

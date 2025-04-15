@@ -1,305 +1,128 @@
 import os
-from pathlib import Path
-from typing import Dict, Tuple, Union, Optional
-from dataclasses import dataclass
-from io import BytesIO
-
 from PIL import Image, ImageDraw, ImageFont
 from django.conf import settings
-from django.contrib.staticfiles.storage import staticfiles_storage
-import ast
-import segno
-import uuid
+import ast  # Pour analyser les clés encodées comme des listes dans des chaînes
 
-# --- Data Classes and Custom Exceptions ---
 
-@dataclass
-class Coordinates:
-    """Represents coordinates for element placement."""
-    top_left: Tuple[int, int]
-    bottom_right: Tuple[int, int]
-    center: Tuple[int, int]
+def get_coordinates_for_element(nom_element, coordonnees_rectangles):
+    """Retourne les coordonnées associées à un élément donné."""
+    for encoded_key, coords in coordonnees_rectangles.items():
+        key_list = ast.literal_eval(encoded_key)  # Convertir la clé encodée en liste
+        if key_list[0] == nom_element:  # Vérifie si la première partie de la clé correspond
+            return coords
+    return None  # Retourne None si l'élément n'est pas trouvé
 
-    @property
-    def width(self) -> int:
-        return self.bottom_right[0] - self.top_left[0]
-    
-    @property
-    def height(self) -> int:
-        return self.bottom_right[1] - self.top_left[1]
 
-class DocumentGenerationError(Exception):
-    """Custom exception for document generation errors."""
-    pass
-
-# --- Coordinate Management ---
-
-def get_coordinates_for_element(nom_element: str, coordonnees_rectangles: Dict) -> Optional[Dict]:
-    """Returns coordinates associated with a given element."""
+def place_image(draw, img, nom_element, coords, contenu, align, offset_x, offset_y):
+    """Place une image sur l'image modèle en fonction des coordonnées et de l'alignement."""
     try:
-        for encoded_key, coords in coordonnees_rectangles.items():
-            key_list = ast.literal_eval(encoded_key)
-            if key_list[0] == nom_element:
-                return coords
-    except (SyntaxError, ValueError) as e:
-        print(f"Error parsing coordinates for '{nom_element}': {e}")
-    return None
+        img_f = os.path.join(settings.STATIC_ROOT, 'images', 'photos', contenu["valeur"])
+        image_element = Image.open(img_f)
+    except FileNotFoundError:
+        print(f"Erreur : L'image '{contenu['valeur']}' n'a pas été trouvée pour '{nom_element}'.")
+        return
 
-def calculate_position(
-    coords: Dict,
-    dimensions: Tuple[int, int],
-    alignment: str,
-    offset_x: int,
-    offset_y: int
-) -> Tuple[int, int]:
-    """Calculate position for element placement."""
-    width, height = dimensions
-    top_left = coords["Coin supérieur gauche"]
-    center = coords["Centre"]
-    
-    positions = {
-        "top_left": (
-            top_left[0] + offset_x,
-            top_left[1] + offset_y
-        ),
-        "center": (
-            center[0] - (width // 2) + offset_x,
-            center[1] - (height // 2) + offset_y
-        ),
-        "left_center": (
-            top_left[0] + offset_x,
-            center[1] - (height // 2) + offset_y
-        ),
-        "center_vertical_left": (
-            top_left[0] + offset_x,
-            center[1] - (height // 2) + offset_y
-        )
-    }
-    
-    return positions.get(alignment, positions["top_left"])
+    # Obtenir les dimensions du rectangle
+    coin_sup_gauche = coords["Coin supérieur gauche"]
+    coin_inf_droit = coords["Coin inférieur droit"]
+    largeur_rect = coin_inf_droit[0] - coin_sup_gauche[0]
+    hauteur_rect = coin_inf_droit[1] - coin_sup_gauche[1]
 
-# --- Image Processing ---
+    # Redimensionner l'image pour qu'elle s'adapte au rectangle
+    image_element = image_element.resize((largeur_rect, hauteur_rect))
 
-def generate_qr_code(url: str, scale: int = 10) -> Image.Image:
-    """Generate a QR code image."""
-    qr = segno.make(url)
-    qr_io = BytesIO()
-    qr.save(qr_io, kind='png', scale=scale, border=0)
-    qr_io.seek(0)
-    return Image.open(qr_io)
+    # Calculer la position en fonction de l'alignement
+    centre = coords["Centre"]
+    if align == "top_left":
+        position = (coin_sup_gauche[0] + offset_x, coin_sup_gauche[1] + offset_y)
+    elif align == "top_center":
+        position = (centre[0] - (largeur_rect // 2) + offset_x, coin_sup_gauche[1] + offset_y)
+    elif align == "center_vertical_left":
+        position = (coin_sup_gauche[0] + offset_x, centre[1] + offset_y)
+    elif align == "center":
+        position = (centre[0] - (largeur_rect // 2) + offset_x, centre[1] - (hauteur_rect // 2) + offset_y)
+    elif align == "left_center":
+        position = (coin_sup_gauche[0] + offset_x, centre[1] - (hauteur_rect // 2) + offset_y)
+    else:
+        print(f"Alignement inconnu pour '{nom_element}', utilisation du coin supérieur gauche.")
+        position = (coin_sup_gauche[0] + offset_x, coin_sup_gauche[1] + offset_y)
 
-def load_image(image_source: Union[str, Image.Image, None], photos_dir: Optional[Path] = None) -> Image.Image:
-    """Load an image from various sources."""
+    # Coller l'image sur le modèle
+    img.paste(image_element, position)
+
+
+def place_text(draw, img, nom_element, coords, contenu, align, offset_x, offset_y):
+    """Place du texte sur l'image modèle en fonction des coordonnées et de l'alignement."""
+    valeur = contenu["valeur"]
+    taille_police = contenu.get("taille_police", 20)  # Valeur par défaut si absent
+    couleur = contenu.get("couleur", "black")  # Couleur par défaut en noir
+
     try:
-        if isinstance(image_source, str):
-            if photos_dir:
-                image_path = photos_dir / image_source
-                if not image_path.exists():
-                    raise FileNotFoundError(f"Image not found: {image_path}")
-                return Image.open(image_path)
-            return Image.open(image_source)
-        elif isinstance(image_source, Image.Image):
-            return image_source
-        else:
-            raise ValueError("Invalid image source type")
-    except Exception as e:
-        raise DocumentGenerationError(f"Failed to load image: {str(e)}")
+        font_path = os.path.join(settings.STATIC_ROOT, 'fonts', 'ARIALBD.TTF')
+        font = ImageFont.truetype(font_path, taille_police)  # Assurez-vous que la police est disponible
+    except IOError:
+        print("Erreur : La police 'ABD.TTF' n'a pas été trouvée. Utilisation de la police par défaut.")
+        font = ImageFont.load_default()
 
-def resize_image(image: Image.Image, width: int, height: int, maintain_aspect_ratio: bool = False) -> Image.Image:
-    """Resize image according to specifications."""
-    if maintain_aspect_ratio:
-        image.thumbnail((width, height), Image.LANCZOS)
-        return image
-    return image.resize((width, height), Image.LANCZOS)
+    # Mesurer la taille du texte en utilisant font.getbbox()
+    bbox = font.getbbox(str(valeur))
+    text_width = bbox[2] - bbox[0]
+    text_height = bbox[3] - bbox[1]
 
-# --- Element Placement ---
+    # Calculer la position en fonction de l'alignement
+    coin_sup_gauche = coords["Coin supérieur gauche"]
+    centre = coords["Centre"]
+    if align == "top_left":
+        x = coin_sup_gauche[0] + offset_x
+        y = coin_sup_gauche[1] + offset_y
+    elif align == "center":
+        x = centre[0] - (text_width // 2) + offset_x
+        y = centre[1] - (text_height // 2) + offset_y
+    elif align == "left_center":
+        x = coin_sup_gauche[0] + offset_x
+        y = centre[1] - (text_height // 2) + offset_y
+    elif align == "center_vertical_left":
+        x = coin_sup_gauche[0] + offset_x
+        y = centre[1] - (text_height // 2) + offset_y
+    else:
+        print(f"Alignement inconnu pour '{nom_element}', utilisation du coin supérieur gauche.")
+        x = coin_sup_gauche[0] + offset_x
+        y = coin_sup_gauche[1] + offset_y
 
-def place_image(
-    img: Image.Image,
-    image_to_place: Union[str, Image.Image, None],
-    element_name: str,
-    coords: Dict,
-    content: Dict,
-    alignment: str = "top_left",
-    offset_x: int = 0,
-    offset_y: int = 0
-) -> None:
-    """Place an image on the template."""
+    # Dessiner le texte
+    draw.text((x, y), str(valeur), font=font, fill=couleur)
+
+
+def generate_habilitation_certificate(data, coordonnees_rectangles, output_path):
+    """Génère un certificat d'habilitation à partir des données et des coordonnées."""
     try:
-        # Handle QR code generation
-        if element_name.startswith('QR'):
-            unique_id = str(uuid.uuid4())
-            url = f"https://kesdocs.vercel.app/verify/{unique_id}"
-            image = generate_qr_code(url)
-        else:
-            image = load_image(image_to_place)
+        img_file = os.path.join(settings.STATIC_ROOT, 'images', 'he2.png')
+        img = Image.open(img_file)  # Assurez-vous que l'image est dans le bon répertoire ou spécifiez le chemin correct
+    except FileNotFoundError:
+        print("Erreur : Le fichier 'he2.png' n'a pas été trouvé.")
+        return
 
-        # Get dimensions and resize
-        width = coords["Coin inférieur droit"][0] - coords["Coin supérieur gauche"][0]
-        height = coords["Coin inférieur droit"][1] - coords["Coin supérieur gauche"][1]
-        image = resize_image(image, width, height, content.get("maintain_aspect_ratio", False))
+    # Créer un objet pour dessiner sur l'image
+    draw = ImageDraw.Draw(img)
 
-        # Calculate position and paste
-        position = calculate_position(
-            coords,
-            image.size,
-            alignment,
-            offset_x,
-            offset_y
-        )
-        img.paste(image, position)
+    # Parcourir les éléments à placer
+    for nom_element, contenu in data.items():
+        # Trouver les coordonnées correspondant à l'élément
+        coords = get_coordinates_for_element(nom_element, coordonnees_rectangles)
 
-    except Exception as e:
-        raise DocumentGenerationError(f"Error placing image for '{element_name}': {str(e)}")
-
-def place_photo(
-    img: Image.Image,
-    element_name: str,
-    coords: Dict,
-    content: Dict,
-    alignment: str = "top_left",
-    offset_x: int = 0,
-    offset_y: int = 0
-) -> None:
-    """Place a photo on the template."""
-    try:
-        photos_dir = Path(staticfiles_storage.path('images/photos/imgsd'))
-        valeur = str(content.get("valeur", ""))
-        print(f"Loading photo: {valeur}")
-        
-        # Skip if value is nan or empty
-        if valeur.lower() == "nan" or not valeur:
-            print(f"Skipping photo placement for {element_name}: empty or nan value")
-            return
-            
-        # Handle spaces in filename
-        valeur = valeur.strip()
-        
-        image = load_image(valeur, photos_dir)
-        width = coords["Coin inférieur droit"][0] - coords["Coin supérieur gauche"][0]
-        height = coords["Coin inférieur droit"][1] - coords["Coin supérieur gauche"][1]
-        
-        resized_image = resize_image(
-            image,
-            width,
-            height,
-            maintain_aspect_ratio=content.get("maintain_aspect_ratio", False)
-        )
-        
-        position = calculate_position(
-            coords,
-            resized_image.size,
-            alignment,
-            offset_x,
-            offset_y
-        )
-        
-        img.paste(resized_image, position)
-        
-    except Exception as e:
-        raise DocumentGenerationError(f"Error placing photo for '{element_name}': {str(e)}")
-
-def place_text(
-    draw: ImageDraw.ImageDraw,
-    nom_element: str,
-    coords: Dict,
-    contenu: Dict,
-    alignment: str = "top_left",
-    offset_x: int = 0,
-    offset_y: int = 0
-) -> None:
-    """Place text on the image."""
-    try:
-        # Handle text value
-        valeur = str(contenu.get("valeur", ""))
-        if valeur.lower() == "nan":
-            valeur = ""
-
-        # Get font settings
-        taille_police = contenu.get("taille_police", 20)
-        couleur = contenu.get("couleur", "black")
-
-        # Load font
-        try:
-            font_path = os.path.join(settings.STATIC_ROOT, 'fonts', 'ARIALBD.TTF')
-            font = ImageFont.truetype(font_path, taille_police)
-        except IOError:
-            print(f"Warning: Using default font for '{nom_element}' - ARIALBD.TTF not found")
-            font = ImageFont.load_default()
-
-        # Get text dimensions and calculate position
-        bbox = font.getbbox(valeur)
-        text_width = bbox[2] - bbox[0]
-        text_height = bbox[3] - bbox[1]
-        position = calculate_position(
-            coords,
-            (int(text_width), int(text_height)),
-            alignment,
-            offset_x,
-            offset_y
-        )
-
-        # Draw text
-        draw.text(position, valeur, font=font, fill=couleur)
-
-    except Exception as e:
-        print(f"Warning: Error placing text for '{nom_element}': {str(e)}")
-
-# --- Main Certificate Generation ---
-
-def generate_habilitation_certificate(
-    data: Dict,
-    coordonnees_rectangles: Dict,
-    output_path: str
-) -> None:
-    """Generate a certification document."""
-    try:
-        # Open template image
-        template_path = os.path.join(settings.STATIC_ROOT, 'images', 'he2.png')
-        img = Image.open(template_path)
-        draw = ImageDraw.Draw(img)
-
-        # Process elements in specific order: first images, then text
-        
-        # First pass: Process all images (QR codes and photos)
-        for nom_element, contenu in data.items():
-            if not (nom_element.startswith('QR') or nom_element.startswith('Photo') or nom_element.startswith('Logo')):
-                continue
-                
-            coords = get_coordinates_for_element(nom_element, coordonnees_rectangles)
-            if not coords:
-                print(f"Warning: No coordinates found for '{nom_element}'")
-                continue
-
+        if coords:
+            print(f"Nom de l'élément : {nom_element}")
             align = contenu.get("align", "top_left")
             offset_x = contenu.get("offset_x", 0)
             offset_y = contenu.get("offset_y", 0)
 
-            if nom_element.startswith('QR'):
-                place_image(img, None, nom_element, coords, contenu, align, offset_x, offset_y)
-            elif nom_element.startswith('Photo'):
-                place_photo(img, nom_element, coords, contenu, align, offset_x, offset_y)
-            elif nom_element.startswith('Logo'):
-                place_photo(img, nom_element, coords, contenu, align, offset_x, offset_y)
-        
-        # Second pass: Process all text elements
-        for nom_element, contenu in data.items():
-            if (nom_element.startswith('QR') or nom_element.startswith('Photo') or nom_element.startswith('Logo')):
-                continue
-                
-            coords = get_coordinates_for_element(nom_element, coordonnees_rectangles)
-            if not coords:
-                print(f"Warning: No coordinates found for '{nom_element}'")
-                continue
+            # Vérifier si l'élément est une image ou du texte
+            if nom_element in ['Logo', 'Photo', 'QR', 'QR 2']:
+                place_image(draw, img, nom_element, coords, contenu, align, offset_x, offset_y)
+            else:
+                place_text(draw, img, nom_element, coords, contenu, align, offset_x, offset_y)
+        else:
+            print(f"Coordonnées non trouvées pour l'élément '{nom_element}'.")
 
-            align = contenu.get("align", "top_left")
-            offset_x = contenu.get("offset_x", 0)
-            offset_y = contenu.get("offset_y", 0)
-
-            place_text(draw, nom_element, coords, contenu, align, offset_x, offset_y)
-
-        # Save the generated document
-        img.save(output_path)
-
-    except Exception as e:
-        raise DocumentGenerationError(f"Error generating certificate: {str(e)}")
+    # Sauvegarder l'image générée
+    img.save(output_path)
