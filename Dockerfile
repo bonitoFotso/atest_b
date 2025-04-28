@@ -7,11 +7,6 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Installer les dépendances
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends gcc \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
 
 # Installer les dépendances Python
 COPY requirements.txt /app/
