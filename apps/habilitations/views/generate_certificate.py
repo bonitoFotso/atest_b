@@ -69,7 +69,7 @@ def get_coordinates_for_element(
     return None
 
 
-def get_image_path(image_filename: str) -> str:
+def get_image_path(image_filename: str, ref) -> str:
     """
     Construct the full path to an image file based on a partial filename without extension.
 
@@ -83,7 +83,7 @@ def get_image_path(image_filename: str) -> str:
         FileNotFoundError: If no matching image file is found
     """
     # Chemin du répertoire des images
-    photos_dir = os.path.join(settings.MEDIA_ROOT, "photos")
+    photos_dir = os.path.join(settings.MEDIA_ROOT, "photos", ref)
 
     # Vérifier si le répertoire existe
     if not os.path.exists(photos_dir):
@@ -227,6 +227,7 @@ def place_image(
     align: str = "top_left",
     offset_x: int = 0,
     offset_y: int = 0,
+    ref: Optional[str] = None,
 ) -> None:
     """
     Place an image on the template image based on coordinates and alignment.
@@ -272,7 +273,7 @@ def place_image(
             )
         else:
             # Handle regular images
-            image_path = get_image_path(contenu["valeur"])
+            image_path = get_image_path(contenu["valeur"], ref)
             image_element = resize_logo_for_template(image_path,coin_sup_gauche,coin_inf_droit)
 
         # Resize image to fit the rectangle
@@ -427,7 +428,7 @@ def generate_habilitation_certificate(
 
         img = Image.open(template_path)
         draw = ImageDraw.Draw(img)
-
+        ref = ''
         # Set counters for logging
         total_elements = len(data)
         processed_elements = 0
@@ -440,6 +441,8 @@ def generate_habilitation_certificate(
         for nom_element, contenu in data.items():
             if nom_element in ["Logo", "Photo", "QR", "QR 2"]:
                 image_elements[nom_element] = contenu
+            elif nom_element in ["Référence"]:
+                ref = contenu.get("valeur")
             else:
                 text_elements[nom_element] = contenu
 
@@ -474,6 +477,7 @@ def generate_habilitation_certificate(
                     align,
                     offset_x,
                     offset_y,
+                    ref,
                 )
                 processed_elements += 1
 

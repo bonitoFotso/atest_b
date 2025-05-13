@@ -319,7 +319,7 @@ def load_data_from_excel(file_path):
                 "couleur": "black",
             },
             "Logo": {
-                "valeur": row["Logo"],
+                "valeur": 'logo',
                 "align": "top_left",
                 "offset_x": 0,
                 "offset_y": 0,
@@ -336,14 +336,14 @@ def load_data_from_excel(file_path):
                 "valeur": qrData,
                 "align": "top_left",
                 "offset_x": 0,
-                "offset_y": 0,
+                "offset_y": -15,
                 "couleur": None,
             },
             "QR 2": {
                 "valeur": qrData,
                 "align": "top_left",
                 "offset_x": 0,
-                "offset_y": 0,
+                "offset_y": -30,
                 "couleur": None,
             },
         }

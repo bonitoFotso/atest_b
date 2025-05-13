@@ -213,8 +213,9 @@ class HabilitationTitleGenerator:
                 if "photo" in field_name:
                     print("reentry")
                     nn = f"{row['Nom'].rstrip()}_{row['Prénom']}"
+                    ref = row['Référence']
                     print(nn)
-                    photo_path = get_image_path(nn)
+                    photo_path = get_image_path(nn, ref)
                     print(photo_path)
                     if photo_path:
                         try:
