@@ -3,8 +3,25 @@ import pandas as pd
 
 from apps.certifications.views.symbole import organize_by_roles
 
-symbols_to_analyze = ["B0", "H0", "H0V", "B1", "B1V", "B2", "B2V", "B2V Essais",
-                      "BC", "BR", "BE", "H1", "H1V", "H2", "H2V", "H2V Essais", "HC"]
+symbols_to_analyze = [
+    "B0",
+    "H0",
+    "H0V",
+    "B1",
+    "B1V",
+    "B2",
+    "B2V",
+    "B2V Essais",
+    "BC",
+    "BR",
+    "BE",
+    "H1",
+    "H1V",
+    "H2",
+    "H2V",
+    "H2V Essais",
+    "HC",
+]
 
 
 def load_data_from_excel(file_path):
@@ -16,15 +33,40 @@ def load_data_from_excel(file_path):
 
     # Parcourir chaque ligne du DataFrame
     for index, row in df.iterrows():
-        symbols = [symbol for symbol in symbols_to_analyze if row.get(f"{symbol}", "") == "APTE"]
+        symbols = [
+            symbol
+            for symbol in symbols_to_analyze
+            if row.get(f"{symbol}", "") == "APTE"
+        ]
         roles_results = organize_by_roles(symbols)
         roles_list = "\n".join([role for role in roles_results.keys()])
-        symbols = ", ".join(sorted(set(symbol for details in roles_results.values() for symbol in details['symbole'])))
-        symbols2 = "\n".join([", ".join(details['symbole']) for details in roles_results.values()])
-        tensions = "\n".join([", ".join(details['tension']) for details in roles_results.values()])
-        periode = f"du {row['Date début']} au {row['Date fin']}" if not pd.isnull(row['Date début']) and not pd.isnull(row['Date fin']) else ""
+        symbols = ", ".join(
+            sorted(
+                set(
+                    symbol
+                    for details in roles_results.values()
+                    for symbol in details["symbole"]
+                )
+            )
+        )
+        symbols2 = "\n".join(
+            [", ".join(details["symbole"]) for details in roles_results.values()]
+        )
+        tensions = "\n".join(
+            [", ".join(details["tension"]) for details in roles_results.values()]
+        )
+        periode = (
+            f"du {row['Date début']} au {row['Date fin']}"
+            if not pd.isnull(row["Date début"]) and not pd.isnull(row["Date fin"])
+            else ""
+        )
 
+        qrData = row["Numéro de Titre"]
 
+        nn = row["Nom"].rstrip()
+        pn = row["Prénom"].rstrip()
+
+        PhotoName = f"{nn}_{pn}"
 
         data = {
             "Role": {
@@ -33,7 +75,7 @@ def load_data_from_excel(file_path):
                 "align": "top_left",
                 "offset_x": 5,
                 "offset_y": 0,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Symbole 2": {
                 "valeur": symbols2,
@@ -41,7 +83,7 @@ def load_data_from_excel(file_path):
                 "align": "top_left",
                 "offset_x": 15,
                 "offset_y": 0,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Tension": {
                 "valeur": tensions,
@@ -49,40 +91,39 @@ def load_data_from_excel(file_path):
                 "align": "top_left",
                 "offset_x": 50,
                 "offset_y": 0,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Nom": {
-                "valeur": row['Nom'],
+                "valeur": row["Nom"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
-
             "Prénom": {
-                "valeur": row['Prénom'],
+                "valeur": row["Prénom"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "TEL": {
-                "valeur": row['TEL'],
+                "valeur": row["TEL"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "BP": {
-                "valeur": row['BP'],
+                "valeur": row["BP"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Periode": {
                 "valeur": periode,
@@ -90,64 +131,63 @@ def load_data_from_excel(file_path):
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -15,
-                "couleur": "black"
+                "couleur": "black",
             },
-
             "Fonction": {
-                "valeur": row['Fonction'],
+                "valeur": row["Fonction"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Client": {
-                "valeur": row['Client'],
+                "valeur": row["Client"],
                 "taille_police": 25,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": 0,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Employeur 2": {
-                "valeur": row['Client'],
+                "valeur": row["Client"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Lieu Formations": {
-                "valeur": row['Lieu Formations'],
+                "valeur": row["Lieu Formations"],
                 "taille_police": 23,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Durée": {
-                "valeur": row['Durée de Formation'],
+                "valeur": row["Durée de Formation"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 8,
                 "offset_y": -4,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Date Remise": {
-                "valeur": row['Date'],
+                "valeur": row["Date"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 6,
                 "offset_y": -8,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Référence": {
-                "valeur": row['Référence'],
+                "valeur": row["Référence"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Symboles": {
                 "valeur": symbols,
@@ -155,148 +195,148 @@ def load_data_from_excel(file_path):
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Titre": {
-                "valeur": row['Titre'],
+                "valeur": row["Titre"],
                 "taille_police": 30,
                 "align": "center",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "#1f66aa"
+                "couleur": "#1f66aa",
             },
             "Lieu": {
-                "valeur": row['Lieu'],
+                "valeur": row["Lieu"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 0,
                 "offset_y": -10,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Nom 2": {
-                "valeur": row['Nom'],
+                "valeur": row["Nom"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Prénom 2": {
-                "valeur": row['Prénom'],
+                "valeur": row["Prénom"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Fonction 2": {
-                "valeur": row['Fonction 2'],
+                "valeur": row["Fonction 2"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 0,
                 "offset_y": -10,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Nom Emp": {
-                "valeur": row['Nom Employeur'],
+                "valeur": row["Nom Employeur"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Prénom Emp": {
-                "valeur": row['Prénom Employeur'],
+                "valeur": row["Prénom Employeur"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Fonction Emp": {
-                "valeur": row['Fonction Employeur'],
+                "valeur": row["Fonction Employeur"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -5,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Référence 2": {
-                "valeur": row['Référence Employeur'],
+                "valeur": row["Référence Employeur"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Date": {
-                "valeur": row['Date Employeur'],
+                "valeur": row["Date Employeur"],
                 "taille_police": 20,
                 "align": "center",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Validité": {
-                "valeur": row['Validité'],
+                "valeur": row["Validité"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "N Titre": {
-                "valeur": row['Numéro de Titre'],
+                "valeur": row["Numéro de Titre"],
                 "taille_police": 20,
                 "align": "center_vertical_left",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Installations concernées": {
-                "valeur": row['Installations Concernées'],
+                "valeur": row["Installations Concernées"],
                 "taille_police": 20,
                 "align": "center",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Indication supplémentaire": {
-                "valeur": row['Indications'],
+                "valeur": row["Indications"],
                 "taille_police": 20,
                 "align": "center",
                 "offset_x": 5,
                 "offset_y": -6,
-                "couleur": "black"
+                "couleur": "black",
             },
             "Logo": {
-                "valeur": row['Logo'],
+                "valeur": row["Logo"],
                 "align": "top_left",
                 "offset_x": 0,
                 "offset_y": 0,
-                "couleur": None
+                "couleur": None,
             },
             "Photo": {
-                "valeur": row['Photo'],
+                "valeur": PhotoName,
                 "align": "center",
                 "offset_x": 0,
                 "offset_y": 0,
-                "couleur": None
+                "couleur": None,
             },
             "QR": {
-                "valeur": row['QR Code'],
+                "valeur": qrData,
                 "align": "top_left",
                 "offset_x": 0,
                 "offset_y": 0,
-                "couleur": None
+                "couleur": None,
             },
             "QR 2": {
-                "valeur": row['QR Code 2'],
+                "valeur": qrData,
                 "align": "top_left",
                 "offset_x": 0,
                 "offset_y": 0,
-                "couleur": None
-            }
+                "couleur": None,
+            },
         }
 
         # Ajouter l'entrée pour cette ligne dans la liste

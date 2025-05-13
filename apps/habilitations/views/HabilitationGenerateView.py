@@ -9,17 +9,21 @@ from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import serializers
-from .generate_certificate import generate_habilitation_certificate
-from .data import load_data_from_excel
+
+from apps.certifications.views.data import load_data_from_excel
 import json
 from django.conf import settings
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 
+from apps.habilitations.views.generate_certificate import generate_habilitation_certificate
+
+
+
 
 # Serializer pour valider le fichier Excel
 class HabilitationFileSerializer(serializers.Serializer):
-    file = serializers.FileField()
+    excel_file = serializers.FileField()
 
 
 class HabilitationGenerateView(APIView):
@@ -33,10 +37,12 @@ class HabilitationGenerateView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         # Charger le fichier Excel et vérifier son contenu
-        excel_file = serializer.validated_data['file']
         try:
+            excel_file = serializer.validated_data['excel_file']
+            if not excel_file:
+                return Response({"error": "Le fichier Excel est manquant"}, status=status.HTTP_400_BAD_REQUEST)
+            
             all_data = load_data_from_excel(excel_file)
-            print(all_data)
         except Exception as e:
             return Response({"error": f"Erreur lors du traitement du fichier Excel : {str(e)}"},
                             status=status.HTTP_400_BAD_REQUEST)

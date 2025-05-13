@@ -15,6 +15,18 @@ import segno
 from io import BytesIO
 
 from apps.certifications.utils import format_certificate_text
+from apps.certifications.views.days_utils import format_date_range
+
+
+
+icon_path = staticfiles_storage.path('images/check-mark.png')
+# Charger ou créer une image de check (vous pouvez utiliser votre propre icône)
+def create_check_icon(size=(20, 20), color=(0, 0, 0)):
+    # Charger une image de check existante
+    check_icon = Image.open(icon_path)
+# Redimensionner si nécessaire
+    check_icon = check_icon.resize((40, 40))
+    return check_icon
 
 month_translation = {
     1: "janvier", 2: "février", 3: "mars", 4: "avril", 5: "mai", 6: "juin",
@@ -24,10 +36,8 @@ month_translation = {
 def convert_date_to_month_year(date_str):
     """
     Convertit une date au format '22 Novembre 2024' en '11/24'.
-
     Args:
         date_str (str): La date sous forme de chaîne, ex. "22 Novembre 2024".
-
     Returns:
         str: La date au format "MM/YY", ex. "11/24".
     """
@@ -40,7 +50,7 @@ def convert_date_to_month_year(date_str):
         raise ValueError("Format de date incorrect. Utilisez le format '22 Novembre 2024'.")
 
 
-class GenerateCertificateView(APIView):
+class GenerateCertificateViews(APIView):
     def post(self, request, *args, **kwargs):
         # Récupérer les données depuis le formulaire
         client = request.data.get("client")
@@ -48,40 +58,7 @@ class GenerateCertificateView(APIView):
         date_formation = request.data.get("date_formation")
 
 
-        # Convertir la date de formation en un format dynamique
-        def format_date_range(date_debut, date_fin):
-            try:
-                # Parse les dates
-                start_date = datetime.strptime(date_debut, "%d/%m/%Y")
-                end_date = datetime.strptime(date_fin, "%d/%m/%Y")
-
-                # Obtenir les composants des dates
-                day_start = start_date.day
-                day_end = end_date.day
-                month_name = month_translation[start_date.month]
-                year = start_date.year
-
-                # Calculer la durée
-                duration_days = (end_date - start_date).days + 1
-
-                # Formater la sortie
-                formatted_date = f"{day_start} {month_name} {year}" if date_debut == date_fin else f"{day_start} au {day_end} {month_name} {year}"
-
-                return {
-                    'formatted_date': formatted_date,
-                    'duration': duration_days,
-                    'start_date': start_date,
-                    'end_date': end_date
-                }
-            except ValueError:
-                return {
-                    'formatted_date': f"{date_debut} au {date_fin}",
-                    'duration': None,
-                    'start_date': None,
-                    'end_date': None
-                }
-
-        # Exemple d'utilisation
+        
 
         def format_date(date_str):
             try:
@@ -131,9 +108,30 @@ class GenerateCertificateView(APIView):
                 date_f = row.get('Date de la formation', client)
                 debut_formation = row.get('Date début')
                 fin_formations = row.get("Date fin")
-                dates = format_date_range(debut_formation, fin_formations)
-                temps_presence = f"{dates['duration'] * 8} heures" if dates['duration'] else "8 heures"
-                print(f"Date de la formation : {dates['formatted_date']}")
+                date_deb_e = row.get("Date début E")
+                date_fin_e = row.get("Date fin E")
+                temps_presence = row.get('Durée de Formation')
+                presentiel = row.get('Présentiel', 'Oui')
+                elearning = row.get('E-learning', 'Non')
+                sat = row.get('Samedi', 'Oui')
+                sun = row.get('Dimanche', 'Oui')
+
+
+
+
+
+                def modef (mode):
+                    if mode == 'Oui':
+                        return True
+                    else:
+                        return False
+
+                is_presentiel = modef(presentiel)
+                is_elearning = modef(elearning)
+
+                dates = format_date_range(debut_formation, fin_formations, date_deb_e, date_fin_e, modef(sat), modef(sun))
+
+
 
                 # converted_date = convert_date_to_month_year(date_f)
 
@@ -231,15 +229,41 @@ class GenerateCertificateView(APIView):
                     temps_presence_text = f"Temps de présence : -{temps_presence}"
                     temps_1, temps_2 = temps_presence_text.split("-")
 
-                    draw.text((195,   930), date_1, font=font_helvetica, fill=(0, 0, 0))
-                    bbox = font_helvetica.getbbox(date_1)
+                    draw.text((95,   930), date_1, font=font_helvetica_bold, fill=(0, 0, 0))
+                    bbox = font_helvetica_bold.getbbox(date_1)
                     date_1_width = bbox[2] - bbox[0]
-                    draw.text((195 + date_1_width,   930), date_2, font=font_helvetica_bold, fill=(0, 0, 0))
+                    draw.text((95 + date_1_width,   930), date_2, font=font_helvetica, fill=(0, 0, 0))
 
-                    draw.text((195,   980), temps_1, font=font_helvetica, fill=(0, 0, 0))
-                    bbox = font_helvetica.getbbox(temps_1)
+                    draw.text((95,   980), temps_1, font=font_helvetica_bold, fill=(0, 0, 0))
+                    bbox = font_helvetica_bold.getbbox(temps_1)
                     temps_1_width = bbox[2] - bbox[0]
-                    draw.text((195 + temps_1_width,   980), temps_2, font=font_helvetica_bold, fill=(0, 0, 0))
+                    draw.text((95 + temps_1_width,   980), temps_2, font=font_helvetica, fill=(0, 0, 0))
+                    
+                    # mode de formation
+                    mode_text = f"Modes de formations"
+                    draw.text((95,   1030), mode_text, font=font_helvetica_bold, fill=(0, 0, 0))
+                    
+                    # mode de formation
+                    check_icon = create_check_icon()
+                    
+                    # Mode de formation avec les checks
+                    mode_text1 = "- Présentiel"
+                    draw.text((110, 1080), mode_text1, font=font_helvetica, fill=(0, 0, 0))
+                    if is_presentiel:  # Variable booléenne pour indiquer si c'est en présentiel
+                        # Coller l'icône de check après le texte
+                        bbox = font_helvetica.getbbox(mode_text1)
+                        temps_1_width = bbox[2] - bbox[0]
+                        img.paste(check_icon, (110 + int(temps_1_width) +10, 1080), check_icon)
+
+                    mode_text2 = "- E-learning"
+                    draw.text((110, 1130), mode_text2, font=font_helvetica, fill=(0, 0, 0))
+
+                    if is_elearning:  # Variable booléenne pour indiquer si c'est en e-learning
+                        # Coller l'icône de check après le texte
+                        bbox = font_helvetica.getbbox(mode_text2)
+                        temps_1_width = bbox[2] - bbox[0]
+                        img.paste(check_icon, (110 + int(temps_1_width) +10, 1130), check_icon)
+                    
 
                     # Numéro d'attestation
                     att_text = f"N D'ATTESTATION : *{numero_attestation}"
